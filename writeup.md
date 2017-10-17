@@ -26,7 +26,7 @@ The goals / steps of this project are the following:
 
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
-###Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
+### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
 ---
 ### Writeup / README
@@ -39,7 +39,8 @@ The code to identify the HOG features is contained in the function `get_hog_feat
 
 I started by reading in all the `vehicle` and `non-vehicle` images. Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
-![alt text][image1] ![alt text][image2]
+![alt text][image1]
+![alt text][image2]
 
 I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 
@@ -65,12 +66,14 @@ I concatenated these three features per image, I scaled them and finally I train
 #### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
 I searched using four different window positions and scales all over the image. These positions were:
+
 | y position         	|     Scale				| 
 |:---------------------:|:---------------------------------------------:| 
 |  380, 480         	| 1			   			| 
 |  380, 530     	| 1.3 						|
 |  380, 580     	| 1.6						|
 |  380, 650     	| 2 						|
+
 
 The next image shows the result of all windows superimposed.
 
